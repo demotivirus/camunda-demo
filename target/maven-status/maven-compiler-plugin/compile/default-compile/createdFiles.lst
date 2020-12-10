@@ -1,0 +1,11 @@
+com\example\camunda\ChargeCardWorker.class
+com\example\camunda\LoggerDelegate.class
+com\example\camunda\prepareToBattle\PrepareToBattle.class
+com\example\camunda\Application.class
+com\example\camunda\aml\Aml.class
+com\example\camunda\romanEmpire\DecideOnExpansion.class
+com\example\camunda\prapareToBattle2\PrepareToBattle2.class
+com\example\camunda\romanEmpire\InvadeWorker.class
+com\example\camunda\prapareToBattle2\EvaluateTheBattle.class
+com\example\camunda\prapareToBattle2\FightTheEnemy.class
+com\example\camunda\weather\CheckWeather.class
