@@ -29,7 +29,7 @@
       </bpmn:extensionElements>
       <bpmn:outgoing>Flow_1sh30j3</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:serviceTask id="Activity_07ue7ic" name="Сохранить запрос в базе" camunda:expression="${createAccessDelegate}">
+    <bpmn:serviceTask id="Activity_07ue7ic" name="Сохранить запрос в базе" camunda:delegateExpression="${createAccessDelegate}">
       <bpmn:incoming>Flow_1sh30j3</bpmn:incoming>
       <bpmn:outgoing>Flow_1nrnzfz</bpmn:outgoing>
     </bpmn:serviceTask>
@@ -40,12 +40,13 @@
           <camunda:formField id="username" type="string" />
           <camunda:formField id="comment" type="string" />
           <camunda:formField id="isApproved" label="Предоставить доступ?" type="boolean" />
+          <camunda:formField id="approver" label="Кто предоставил доступ" type="string" defaultValue="${currentUser()}" />
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1nrnzfz</bpmn:incoming>
       <bpmn:outgoing>Flow_1x1oikx</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:serviceTask id="Activity_0p9xfpp" name="Обновить запрос в бд" camunda:expression="${updateAccessDelegate}">
+    <bpmn:serviceTask id="Activity_0p9xfpp" name="Обновить запрос в бд" camunda:delegateExpression="${updateAccessDelegate}">
       <bpmn:incoming>Flow_1x1oikx</bpmn:incoming>
       <bpmn:outgoing>Flow_109lm3t</bpmn:outgoing>
     </bpmn:serviceTask>
